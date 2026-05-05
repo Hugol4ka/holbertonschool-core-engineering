@@ -4,5 +4,4 @@ for i in range(100):
     if i < 99:
         print("{:02d}, ".format(i), end="")
     else:
-        # Affichage du dernier nombre SEUL (le saut de ligne est automatique ici)
         print("{:02d}".format(i))
