@@ -2,9 +2,9 @@
 """Module that contains the uppercase function"""
 
 
-def uppercase(string):
+def uppercase(str):
     """print the string in uppercase followed by a new line."""
-    for char in string:
+    for char in str:
         if ord(char) >= 97 and ord(char) <= 122:
             ascii_code = ord(char)
             upper_code = ascii_code - 32
