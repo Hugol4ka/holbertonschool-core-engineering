@@ -5,11 +5,9 @@
 def uppercase(string):
     """print the string in uppercase followed by a new line."""
     for char in string:
-        if char >= 'a' and char <= 'z':
-            ascii = ord(char)
-            code_uppercase = ascii - 32
-            char = chr(code_uppercase)
-
+        if ord(char) >= 97 and ord(char) <= 122:
+            ascii_code = ord(char)
+            upper_code = ascii_code - 32
+            char = chr(upper_code)
         print("{}".format(char), end="")
-
-    print()
+    print("")
