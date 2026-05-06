@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-def islower():
+"""Module that contains the islower function"""
 
-    ascii_value = ord()
+
+def islower(c):
+    """Check if the c character is lowercase"""
+    ascii_value = ord(c)
 
     if ascii_value >= 97 and ascii_value <= 122:
         return True
