@@ -4,6 +4,8 @@
 
 def uppercase(str):
     """print the string in uppercase followed by a new line."""
+    str = "{}".format(str)
+
     for char in str:
         if ord(char) >= 97 and ord(char) <= 122:
             ascii_code = ord(char)
