@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""This module defines an Square class."""
+"""This module defines a Square class."""
 
 
 class Square:
     """A class that defines a square by its size."""
+
     def __init__(self, size=0):
         """Initialize the square with a private size attribute."""
-
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
