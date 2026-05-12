@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """This module defines a Rectangle class."""
 
+
 class Rectangle:
     """A class that defines a rectangle by its width and height."""
 
@@ -15,7 +16,6 @@ class Rectangle:
         return self.__width
 
     @width.setter
-
     def width(self, value):
         """Sets the width of the rectangle."""
         if not isinstance(value, int):
