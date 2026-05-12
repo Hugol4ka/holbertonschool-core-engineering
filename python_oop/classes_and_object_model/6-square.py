@@ -32,7 +32,7 @@ class Square:
     def position(self):
         """etrieves the position of the square."""
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         """Sets the position of the square with validation."""
@@ -42,7 +42,6 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
-
     def my_print(self):
         "Display square whit #"
         if self.size == 0:
@@ -51,7 +50,7 @@ class Square:
 
         for i in range(self.position[1]):
             print("")
-        
+
         for i in range(self.size):
             print(" " * self.position[0] + "#" * self.size)
 
@@ -59,7 +58,7 @@ class Square:
         """Returns the string representation of the square instance."""
         if self.size == 0:
             return ""
-        
+
         else:
             lignes = []
 
