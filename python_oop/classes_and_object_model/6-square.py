@@ -14,11 +14,6 @@ class Square:
         """Calculates the current square area."""
         return self.__size * self.__size
 
-    @property
-    def size(self):
-        """etrieves the position of the square."""
-        return self.__size
-
     @size.setter
     def size(self, value):
         """Sets the size of the square with validation."""
@@ -27,6 +22,11 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    @property
+    def size(self):
+        """etrieves the position of the square."""
+        return self.__size
 
     @position.setter
     def position(self, value):
@@ -42,26 +42,27 @@ class Square:
         "Display square whit #"
         if self.size == 0:
             print("")
+            return
 
-        for i in range(self.position):
+        for i in range(self.position[1]):
             print("")
         
         for i in range(self.size):
             print(" " * self.position[0] + "#" * self.size)
 
-        def __str__(self):
-            """Returns the string representation of the square instance."""
-            if self.size == 0:
-                return ""
+    def __str__(self):
+        """Returns the string representation of the square instance."""
+        if self.size == 0:
+            return ""
         
-            lignes = []
+        lignes = []
 
-            for i in range(self.position[1]):
-                lignes.append("")
+        for i in range(self.position[1]):
+            lignes.append("")
 
-            for i in range(self.size):
+        for i in range(self.size):
 
-                one_ligne = (" " * self.position[0]) + ("#" * self.size)
-                lignes.append(one_ligne)
+            one_ligne = (" " * self.position[0]) + ("#" * self.size)
+            lignes.append(one_ligne)
 
-            return "\n".join(lignes)
+        return "\n".join(lignes)
