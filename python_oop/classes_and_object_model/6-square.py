@@ -14,6 +14,11 @@ class Square:
         """Calculates the current square area."""
         return self.__size * self.__size
 
+    @property
+    def size(self):
+        """etrieves the position of the square."""
+        return self.__size
+
     @size.setter
     def size(self, value):
         """Sets the size of the square with validation."""
@@ -27,7 +32,7 @@ class Square:
     def size(self):
         """etrieves the position of the square."""
         return self.__size
-
+    
     @position.setter
     def position(self, value):
         """Sets the position of the square with validation."""
@@ -55,14 +60,15 @@ class Square:
         if self.size == 0:
             return ""
         
-        lignes = []
+        else:
+            lignes = []
 
-        for i in range(self.position[1]):
-            lignes.append("")
+            for i in range(self.position[1]):
+                lignes.append("")
 
-        for i in range(self.size):
+            for i in range(self.size):
 
-            one_ligne = (" " * self.position[0]) + ("#" * self.size)
-            lignes.append(one_ligne)
+                one_ligne = (" " * self.position[0]) + ("#" * self.size)
+                lignes.append(one_ligne)
 
-        return "\n".join(lignes)
+            return "\n".join(lignes)
