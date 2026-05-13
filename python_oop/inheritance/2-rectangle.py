@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rectangle module."""
+"""This module defines a Rectangle."""
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
