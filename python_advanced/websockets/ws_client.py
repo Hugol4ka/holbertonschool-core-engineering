@@ -4,8 +4,8 @@ import websockets
 import asyncio
 
 
-async def connect_and_send(url, message):
-    async with websockets.connect(url) as websocket:
+async def connect_and_send(uri, message):
+    async with websockets.connect(uri) as websocket:
         await websocket.send(message)
         response = await websocket.recv()
         print(f"{response}")
