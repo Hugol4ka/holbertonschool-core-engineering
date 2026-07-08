@@ -4,6 +4,7 @@ import asyncio
 import websockets
 from websockets.exceptions import ConnectionClosed
 
+
 async def connection_handler(websocket):
     try:
         async for message in websocket:
