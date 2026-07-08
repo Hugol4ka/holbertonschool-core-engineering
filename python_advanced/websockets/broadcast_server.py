@@ -6,12 +6,13 @@ from websockets.exceptions import ConnectionClosed
 
 connected_clients = set()
 
+
 async def connection_handler(websocket):
     connected_clients.add(websocket)
     try:
         async for message in websocket:
             for client in connected_clients:
-                    await client.send(f"B:{message}")
+                await client.send(f"B:{message}")
     except ConnectionClosed:
         print("Client disconnected")
     finally:
