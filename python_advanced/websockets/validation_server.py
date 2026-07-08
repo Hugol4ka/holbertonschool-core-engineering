@@ -2,16 +2,19 @@
 
 import asyncio
 import websockets
-
+from websockets.exceptions import ConnectionClosed
 
 async def connection_handler(websocket):
-    async for message in websocket:
-        message_clean = message.strip()
+    try:
+        async for message in websocket:
+            message_clean = message.strip()
 
-        if not message_clean:
-            await websocket.send("ERR:EMPTY")
-        else:
-            await websocket.send(f"OK:{message_clean}")
+            if not message_clean:
+                await websocket.send("ERR:EMPTY")
+            else:
+                await websocket.send(f"OK:{message_clean}")
+    except ConnectionClosed:
+        print("Client Disconnect")
 
 
 async def main():
